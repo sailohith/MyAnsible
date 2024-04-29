@@ -6,7 +6,8 @@
     apt:
       name: apache2
       state: present
-  - name: uninstall apache2 server  
-    apt:
+
+  - name: i want to start apache2 service
+    service:
       name: apache2
-      state: absent
+      state: started 
