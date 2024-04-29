@@ -1,2 +1,23 @@
+[mywebservers]
 172.31.28.243
 172.31.44.6
+
+[myappservers]
+172.31.28.43
+172.31.44.63
+
+
+[mydbservers]
+172.31.28.23
+172.31.44.123
+
+[myubantuservers]
+172.31.28.243
+
+[myreadhatservers]
+172.31.44.6
+
+[mywebservers:vars]
+var=value
+mywebpackonubantu= apache2
+mywebpackonredhat= httpd
