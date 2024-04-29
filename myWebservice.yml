@@ -1,6 +1,8 @@
 ---
 - hosts: all
   become: yes
+  gather_facts: yes
+
   tasks:
   - name: install apache2 server  
     apt:
@@ -10,4 +12,9 @@
   - name: i want to start apache2 service
     service:
       name: apache2
-      state: started 
+      state: started
+      
+  - name: uninstall apache2 server  
+    apt:
+      name: apache2
+      state: absent
