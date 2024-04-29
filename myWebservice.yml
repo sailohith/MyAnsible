@@ -6,3 +6,7 @@
     apt:
       name: apache2
       state: present
+  - name: uninstall apache2 server  
+    apt:
+      name: apache2
+      state: absent
