@@ -1,0 +1,17 @@
+---
+- hosts: mywebservers
+  become: yes
+  gather_facts: yes
+
+  tasks:
+  - name: install java on ubantu
+    apt:
+      name: "{{javapackonubantu}}"
+      state: present
+    when: ansible_os_family=="Debian"
+
+  - name: install java on redhat
+    yum:
+      name: "{{javapackonredhat}}"
+      state: present
+    when: ansible_os_family=="RedHat"
