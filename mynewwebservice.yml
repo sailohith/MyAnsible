@@ -20,10 +20,10 @@
     dnf:
       name: httpd
       state: present
-    when: ansible_os_family=="ReadHat" 
+    when: ansible_os_family=="RedHat" 
 
   - name: I need to start http service
     service: 
       name: httpd
       state: started
-    when: ansible_os_family=="ReadHat"
+    when: ansible_os_family=="RedHat"
