@@ -6,24 +6,24 @@
   tasks:
   - name: install apache2 server  
     apt:
-      name: {{mywebpackonubantu}}
+      name: apache2
       state: present
     when: ansible_os_family=="Debian"
 
   - name: i want to start apache2 service
     service:
-      name: {{mywebpackonubantu}}
+      name: apache2
       state: started
     when: ansible_os_family=="Debian"
 
   - name: I need to install httpd server on redhat
     dnf:
-      name: {{mywebpackonredhat}}
+      name: httpd
       state: present
     when: ansible_os_family=="RedHat" 
 
   - name: I need to start http service
     service: 
-      name: {{mywebpackonredhat}}
+      name: httpd
       state: started
     when: ansible_os_family=="RedHat"
