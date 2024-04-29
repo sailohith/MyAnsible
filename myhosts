@@ -17,3 +17,7 @@
 [myreadhatservers]
 172.31.44.6
 
+[mywebservers:vars]
+var= value
+mywebpackonubantu= apache2
+mywebpackonredhat= httpd
