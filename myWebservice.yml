@@ -14,7 +14,4 @@
       name: apache2
       state: started
       
-  - name: uninstall apache2 server  
-    apt:
-      name: apache2
-      state: absent
+  
