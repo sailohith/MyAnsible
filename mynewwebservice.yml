@@ -15,8 +15,15 @@
       name: apache2
       state: started
     when: ansible_os_family=="Debian"
-      
-  - name: uninstall apache2 server  
-    apt:
-      name: apache2
-      state: absent
+
+  - name: I need to install httpd server on redhat
+    dnf:
+      name: httpd
+      state: present
+    when: ansible_os_family=="ReadHat" 
+
+  - name: I need to start http service
+    service: 
+      name: httpd
+      state: started
+    when: ansible_os_family=="ReadHat"
