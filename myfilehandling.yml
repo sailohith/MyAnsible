@@ -26,6 +26,6 @@
       state: present
 
   - name: change the index file in node01
-    templete:
+    template:
       src: myindex.j2
       dest: /var/www/html/index.html
