@@ -5,10 +5,10 @@
 
   - name: create a folder
     file:
-    path: /home/loli/MyAsible/myfolder
+    path: /home/loli/MyAnsible/myfolder
     state: directory
 
   - name: create the file
-    file:
-      path: /home/loli/MyAsible/myfolder/myfirstfile
+    file:   
+      path: /home/loli/MyAnsible/myfolder/myfirstfile
       state: touch
