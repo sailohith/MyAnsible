@@ -13,3 +13,19 @@
     copy:
       src: mytextfile
       dest: /home/loli/MyAnsible
+
+  - name: copy the file from net 
+    get-url:
+       src: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.10/bin/apache-tomcat-10.0.10.tar.gz
+       dest: /home/loli/MyAnsible/apache-tomcat-10.0.10.tar.gz
+       force_basic_outh: yes
+
+  - name: need to install apache2 web server
+    apt: 
+      name: apache2 
+      state: present
+
+  - name: change the index file in node01
+    templete:
+      src: myindex.j2
+      dest: /var/www/html/index.html
