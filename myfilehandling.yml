@@ -9,3 +9,7 @@
       state: directory
 
   - include_tasks: myfile.yml
+  - name: copy the file into node 01
+    copy:
+      src: mytextfile
+      dest: /home/loli/MyAnsible
