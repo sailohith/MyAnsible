@@ -5,8 +5,8 @@
 
   - name: create a folder
     file:
-    path: /home/loli/MyAnsible/myfolder
-    state: directory
+      path: /home/loli/MyAnsible/myfolder
+      state: directory
 
   - name: create the file
     file:   
