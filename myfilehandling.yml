@@ -1,0 +1,14 @@
+---
+- hosts: 172.31.28.243
+  become: yes
+  tasks:
+
+  - name: create a folder
+    file:
+    path: /home/loli/myfolder
+    state: directory
+
+  - name: create the file
+    file:
+      path: /home/loli/myfolder/myfirstfile
+      state: touch
