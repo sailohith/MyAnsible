@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.28.243
+  become: yes
+  tasks:
+  - name: i want to exexute lunix command
+    command:  hostname -f
+    register: myresult
+
+  - name: i want to see( display) first task result
+    debug:
+      msg:"{{myresult}}"
