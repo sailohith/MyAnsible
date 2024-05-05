@@ -20,4 +20,12 @@
        dest: /home/loli/MyAnsible/apache-tomcat-10.0.10.tar.gz
        force_basic_auth: yes
 
- 
+  - name: need to install apache2 web server
+    apt: 
+      name: apache2 
+      state: present
+
+  - name: change the index file in node01
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
