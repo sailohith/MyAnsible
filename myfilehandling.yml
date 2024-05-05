@@ -8,4 +8,4 @@
       path: /home/loli/MyAnsible/myfolder
       state: directory
 
-  - include-tasks: myfile.yml
+  - include_tasks: myfile.yml
