@@ -29,3 +29,10 @@
     template:
       src: myindex.j2
       dest: /var/www/html/index.html
+    notify: restartthewebserver
+
+  handlers:
+  - name: restartthewebserver
+    service:
+      name: apache2
+      state: restarted    
