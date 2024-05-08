@@ -1,10 +1,10 @@
 ---
 - name: create link files tomcat up
   command:
-    cmd: ln -s /opt/tomcat-9.0.55/bin/startup.sh /usr/local/bin/tomcatup
+    cmd: ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
     
     
 - name: create link files tomcat down
   command:
-    cmd: ln -s /opt/tomcat-9.0.55/bin/shutdown.sh /usr/local/bin/tomcatdown
+    cmd: ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
     
