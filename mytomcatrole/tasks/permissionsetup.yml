@@ -1,0 +1,6 @@
+---
+- name: change permission on statup.sh 
+  command: chmod +x /opt/tomcat/bin/startup.sh
+
+- name: changet permission on shoutdown.sh
+  command: chmod +x /opt/tomcat/bin/shutdown.sh

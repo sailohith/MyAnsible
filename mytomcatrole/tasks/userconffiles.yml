@@ -1,0 +1,15 @@
+---
+- name: copy host-manager/META-INF/context.xml file into node side 
+  templete:
+     src: templetes/myhostcontext.j2
+     dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml 
+
+- name: copy manager /META-INF/context.xml file into node side 
+  templete:
+    src: templetes/mymangercontext.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: copy tomcat user file into ansible node side
+  templete:
+     src: templetes/mytomuser.j2
+     dest: /opt/tomcat/conf/tomcat-users.xml
