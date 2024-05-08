@@ -1,4 +1,5 @@
 ---
 - name: start tomcat
-  command: /usr/local/bin/tomcatup
+  command: 
+    cmd: /usr/local/bin/tomcatup
     
